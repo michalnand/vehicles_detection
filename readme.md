@@ -60,12 +60,9 @@ To ensure the models generalized well to real-world variations (sensor misalignm
 * **Intersection over Union (IoU):** 0.7446
 
 #### Edge Execution Latency Benchmarks
-| Metric / Slice | Inference Duration |
-| :--- | :--- |
-| **Mean Latency** | 116 µs (0.000116 sec) |
-| **Standard Deviation ($\sigma$)** | 9 µs |
-| **95th Percentile (P95)** | 124 µs |
-| **Worst-Case Peak Outlier** | 612 µs |
+
+**TODO**
+
 
 #### Binary Confusion Matrix
 | True Positive (TP) | True Negative (TN) | False Positive (FP) | False Negative (FN) |
@@ -98,11 +95,8 @@ To ensure the models generalized well to real-world variations (sensor misalignm
 | **6: 📦 Other** | 0.96434 | 0.95925 | 0.96179 | 0.97980 |
 
 #### Inference Latency Profile
-| Statistical Slice | Latency |
-| :--- | :--- |
-| **Mean Latency per Sample** | 137 µs (0.000137 sec) |
-| **95th Percentile (P95)** | 143 µs |
-| **Maximum Outlier Peak** | 7.11 ms |
+
+**TODO**
 
 ---
 

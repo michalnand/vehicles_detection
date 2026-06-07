@@ -1,0 +1,23 @@
+{
+    "dataset_info": {
+        "dataset_path": "/users/michal/datasets/car_detection_2/",
+        "total_samples_evaluated": 1000
+    },
+    "hyperparameters": {
+        "detection_threshold": 0.2,
+        "min_window_ratio_threshold": 0.02
+    },
+    "confusion_matrix": {
+        "true_positive": 463,
+        "true_negative": 462,
+        "false_positive": 63,
+        "false_negative": 12
+    },
+    "metrics": {
+        "accuracy": 0.925,
+        "precision": 0.8802,
+        "recall_sensitivity": 0.9747,
+        "specificity": 0.88,
+        "f1_score": 0.9251
+    }
+}

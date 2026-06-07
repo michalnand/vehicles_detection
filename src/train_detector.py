@@ -26,10 +26,10 @@ class RNNDetectorConfig:
         self.learning_rate = 0.001
         self.batch_size    = 128
 
-        self.num_epoch     = 5
+        self.num_epoch     = 10 
         self.num_steps     = (self.num_epoch*len(self.training_dataset))//self.batch_size
 
-        self.num_testing_samples = 10000
+        self.num_testing_samples = 10000       
 
         self.model = RnnModelDetector(3, 1, 32) 
         self.model.to(self.device)  
@@ -84,5 +84,8 @@ if __name__ == "__main__":
 
     config = RNNDetectorConfig()
 
-    pipeline = AILibs.SegmentationTrainingPipeline(config)
+    pipeline = AILibs.RNNSegmentationTrainingPipeline(config)
     pipeline.run()
+
+
+    

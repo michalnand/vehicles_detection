@@ -2,12 +2,15 @@ import torch
 
 '''
     RNN seq2seq model
-    x.shape = (batch, seq_length, num_inputs)
-    y.shape = (batch, seq_length, num_outputs)
+    x.shape     = (batch, seq_length, num_inputs)
+    y.shape     = (batch, seq_length, num_outputs)
+    h_0.shape   = (1, batch, num_hidden), optional initial hidden state
 '''
 class RnnModelDetector(torch.nn.Module):
     def __init__(self, num_inputs, num_outputs, num_hidden):
         super(RnnModelDetector, self).__init__()
+
+        self.num_hidden = num_hidden
 
         self.rnn    = torch.nn.GRU(num_inputs, num_hidden, batch_first=True)
         self.fc     = torch.nn.Linear(num_hidden, num_outputs)  
@@ -21,8 +24,8 @@ class RnnModelDetector(torch.nn.Module):
         torch.nn.init.orthogonal_(self.fc.weight, gain=0.01)
         torch.nn.init.zeros_(self.fc.bias)
 
-    def forward(self, x):
-        rnn_output, hidden = self.rnn(x)  
+    def forward(self, x, h_0=None):
+        rnn_output, hidden = self.rnn(x, h_0)  
 
         output = self.fc(rnn_output)
         return output

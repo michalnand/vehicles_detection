@@ -23,7 +23,7 @@ class DatasetMagnetometerBase:
         self.class_labels    = numpy.array(class_label[valid_id], dtype=int)
         self.event_positions = numpy.array(event_position[valid_id], dtype=int)
 
-
+            
         #load raw magnetic field data
         x = numpy.transpose(data)[6]
         y = numpy.transpose(data)[7]
